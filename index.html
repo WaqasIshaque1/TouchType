@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="libraries/p5.svg.js"></script>
+    <script language="javascript" type="text/javascript" src="libraries/p5.vida.js"></script>
+    <script language="javascript" type="text/javascript" src="libraries/p5.vida.min.js"></script>
+    <script language="javascript" type="text/javascript" src="Glyph.js"></script>
+    <script language="javascript" type="text/javascript" src="Letter.js"></script>
+    <script language="javascript" type="text/javascript" src="Multitouch.js"></script>
+    <script language="javascript" type="text/javascript" src="Multitouch_GUI.js"></script>
+    <script language="javascript" type="text/javascript" src="responsive.js"></script>
+    <script language="javascript" type="text/javascript" src="touchType_Mobile.js"></script>
+    <style>
+        html {
+            touch-action: none;
+        }
+        
+        body {
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            position: fixed;
+            height: 100%;
+            display: block;
+        }
+        
+        * {
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: -moz-none;
+            -o-user-select: none;
+            user-select: none;
+        }
+        
+        .icon {
+            position: fixed;
+        }
+        
+        @font-face {
+            font-family: '__strokeWeight_5';
+            font-style: italic;
+            font-weight: 400;
+            src: local('__strokeWeight_5'), url('assets/strokeweight-080rotater12.woff') format('woff');
+        }
+        
+        #txt {
+            color: #FFFFFF;
+            font-family: '__strokeWeight_5';
+            font-size: 28px;
+            font-style: italic;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 39px;
+            text-align: center;
+            position: fixed;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            visibility: hidden;
+            cursor: default;
+        }
+    </style>
+    <img class="icon" src="assets/reset.svg" id="reset" style="width: 30px; height: 30px; top: 20px; left: 110px;" onclick="reset()" draggable="false">
+    <img class="icon" src="assets/download.svg" id="download" style="width: 30px; height: 30px; top: 20px; left: 60px;" onclick="saveIMG()" draggable="false">
+    <img src="assets/sorry.gif" id="sorry" style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); visibility: hidden;" draggable="false">
+
+    <p id="txt">
+        We're sorry, this tool only works on<br> multi-touch devices (Safari/Chrome).<br> If you are on a multi-touch device click <u><span onclick="enable()" style="cursor:pointer">here</span></u>.
+    </p>
+</head>
+
+<body onclick="doubletap()">
+</body>
+
+</html>
